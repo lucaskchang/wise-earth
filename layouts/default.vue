@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primary min-h-screen text-white"
+    class="min-h-screen bg-blue-400 text-white"
   >
     <div class="flex w-full flex-row items-center justify-between px-8 py-4 text-3xl font-semibold">
       <NuxtLink
@@ -38,7 +38,7 @@
           >
             <UIcon
               :name="social.icon"
-              class="size-8"
+              class="size-9"
             />
           </a>
         </div>
