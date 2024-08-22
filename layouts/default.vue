@@ -71,11 +71,11 @@ const links = [
 const socials = [
   {
     icon: 'i-mdi-instagram',
-    link: 'https://www.instagram.com',
+    link: 'https://www.instagram.com/wiseearth11/',
   },
   {
     icon: 'i-mdi-pinterest',
-    link: 'https://www.pinterest.com',
+    link: 'https://www.pinterest.com/wiseearth11/_created/',
   },
 ];
 </script>
