@@ -1,9 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   app: {
     head: {
-      title: 'Bay Clock 3',
+      title: 'WiseEarth',
       htmlAttrs: {
         lang: 'en',
       },
@@ -17,7 +18,12 @@ export default defineNuxtConfig({
     },
   },
 
+  colorMode: {
+    preference: 'light',
+  },
+
   css: ['@/assets/css/styles.scss'],
+
   modules: [
     '@nuxt/ui',
     '@nuxt/image',
@@ -27,22 +33,20 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
   ],
-  colorMode: {
-    classSuffix: '',
-  },
+
   googleFonts: {
-    families: {
-      'Inter': true,
-      'Patrick Hand': true,
-      'Nunito': true,
-    },
+    families: {},
   },
+
   gtag: {
     id: 'G-QNLZ5NY7HH',
   },
+
   eslint: {
     config: {
       stylistic: true,
     },
   },
+
+  compatibilityDate: '2024-08-22',
 });

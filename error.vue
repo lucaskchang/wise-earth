@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-screen flex-col items-center justify-center space-y-4 p-4 text-center">
+  <div class="flex h-screen flex-col items-center justify-center space-y-4 bg-white p-4 text-center text-gray-950">
     <p class="text-5xl font-bold md:text-8xl">
       Page not found
     </p>
