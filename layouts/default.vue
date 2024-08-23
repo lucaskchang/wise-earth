@@ -1,8 +1,8 @@
 <template>
   <div
-    class="min-h-screen bg-blue-400 text-white"
+    class="min-h-screen bg-blue-300 font-serif text-white"
   >
-    <div class="flex w-full flex-row items-center justify-between px-8 py-4 text-3xl font-semibold">
+    <div class="flex w-full flex-row items-center justify-between px-8 py-6 text-3xl font-semibold">
       <NuxtLink
         to="/"
         class="flex flex-row items-center space-x-6"
@@ -45,6 +45,11 @@
       </div>
     </div>
     <slot />
+    <div class="sticky top-full bg-blue-400 px-8 py-6">
+      <p>
+        &copy; {{ new Date().getFullYear() }} WiseEarth. All Rights Reserved.
+      </p>
+    </div>
   </div>
 </template>
 
