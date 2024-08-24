@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.6.8",
     "@nuxt/eslint": "^0.5.1",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
