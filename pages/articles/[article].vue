@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="mx-auto flex w-3/4 flex-row space-x-12 pb-12 pt-24">
-      <div class="w-1/2 space-y-4">
+    <div class="mx-auto flex w-3/4 flex-col pb-12 pt-24 md:flex-row md:space-x-12">
+      <div class="space-y-4 md:w-1/2">
         <div>
           <p class="2xl:text-lg">
             {{ article.publishedDate }}
           </p>
-          <p class="text-5xl font-bold 2xl:text-6xl">
+          <p class="text-4xl font-bold md:text-5xl 2xl:text-6xl">
             {{ article.title }}
           </p>
         </div>
@@ -28,7 +28,7 @@
           {{ article.description }}
         </p>
       </div>
-      <div class="w-1/2">
+      <div class="order-first md:order-last md:w-1/2">
         <img
           :src="article.image"
           class="mx-auto max-h-96 rounded-lg object-cover"
@@ -48,7 +48,7 @@
           Recent Posts
         </p>
         <div
-          v-for="post of blogPosts.slice(0, 3)"
+          v-for="post of blogPosts.slice(0, 5)"
           :key="post.id"
         >
           <NuxtLink

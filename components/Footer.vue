@@ -1,13 +1,13 @@
 <template>
   <div class="sticky top-full bg-blue-400">
     <div class="px-8 py-6">
-      <div class="flex flex-row">
-        <div class="flex w-1/2 flex-col">
+      <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:w-1/2">
           <NuxtImg
             format="webp"
             src="/logo_banner.png"
             alt="logo"
-            class="h-96 w-[576px]"
+            class="w-full md:h-96 md:w-[576px]"
           />
           <div class="mt-4 flex flex-row text-lg">
             <div
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="flex w-1/2 flex-col space-y-4 p-4">
+        <div class="order-first flex flex-col space-y-4 px-0 py-4 md:order-last md:w-1/2 md:px-4">
           <p class="text-3xl font-bold">
             Subscribe
           </p>

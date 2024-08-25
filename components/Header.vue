@@ -14,7 +14,7 @@
         WiseEarth
       </p>
     </NuxtLink>
-    <div class="flex flex-row items-center space-x-6">
+    <div class="hidden flex-row items-center space-x-6 md:flex">
       <NuxtLink
         v-for="link of links"
         :key="link.name"

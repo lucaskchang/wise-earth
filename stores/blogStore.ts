@@ -1,3 +1,10 @@
+function photoFromId(id: string) {
+  const blogStore = useBlogStore();
+  const { assets } = storeToRefs(blogStore);
+  const image = assets.value.find(asset => asset.sys.id === id);
+  return image.fields.file.url.replace('//', 'https://');
+}
+
 export const useBlogStore = defineStore('blog', () => {
   const space = ref(null);
 
