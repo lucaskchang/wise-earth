@@ -42,32 +42,31 @@
       <div class="flex flex-wrap">
         <div
           v-for="member of teamMembers"
-          :key="member.sys.id"
+          :key="member.id"
           class="w-full p-4 md:w-1/2 xl:w-1/3"
         >
-          <div class="h-96 rounded-lg bg-white p-4 text-gray-950 md:h-[576px] 2xl:h-96">
+          <div class="h-96 overflow-auto rounded-lg bg-white p-4 text-gray-950 md:h-[576px] 2xl:h-96">
             <div class="flex flex-row items-center space-x-4">
               <img
                 class="size-24 rounded-full object-cover 2xl:size-32"
-                :src="photoFromId(member.fields.headshot.sys.id).fields.file.url.replace('//', 'https://')"
+                :src="member.headshot"
               >
               <div>
                 <p class="text-2xl font-semibold 2xl:text-3xl">
-                  {{ member.fields.name }}
+                  {{ member.name }}
                 </p>
                 <p class="text-lg font-semibold text-gray-700 2xl:text-xl">
-                  {{ member.fields.position }}
+                  {{ member.position }}
                 </p>
               </div>
             </div>
             <p class="mt-4 text-lg 2xl:text-xl">
-              {{ member.fields.description }}
+              {{ member.description }}
             </p>
           </div>
         </div>
       </div>
     </div>
-    {{ photoFromId('tes') }}
   </div>
 </template>
 

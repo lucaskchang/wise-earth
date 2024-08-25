@@ -67,5 +67,9 @@ const socials = [
     icon: 'i-mdi-pinterest',
     link: 'https://www.pinterest.com/wiseearth11/_created/',
   },
+  {
+    icon: 'i-mdi-linkedin',
+    link: 'https://linkedin.com',
+  },
 ];
 </script>

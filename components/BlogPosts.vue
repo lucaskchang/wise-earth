@@ -6,22 +6,28 @@
     <div class="mx-auto flex flex-wrap py-4">
       <div
         v-for="post of blogPosts"
-        :key="post.sys.id"
-        class="w-full p-4 md:w-1/3 2xl:w-1/6"
+        :key="post.id"
+        class="w-full p-4 md:w-1/3 2xl:w-1/4"
       >
-        <NuxtLink :to="`articles/${post.sys.id}`">
-          <div class="h-96 rounded-lg bg-white text-gray-950 transition ease-in-out hover:scale-105 duration-300">
+        <NuxtLink :to="`articles/${post.id}`">
+          <div class="h-96 rounded-lg bg-white text-gray-950 transition duration-300 ease-in-out hover:scale-105">
             <img
-              class="h-48 w-full rounded-t-lg object-cover"
-              src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="h-36 w-full rounded-t-lg object-cover"
+              :src="post.image"
             >
-            <div class="flex h-48 flex-col justify-between p-4">
-              <div>
-                <p class="text-2xl font-bold">
-                  {{ post.fields.title }}
+            <div class="flex h-48 flex-col p-4">
+              <div class="mb-auto">
+                <p class="text-sm">
+                  {{ post.publishedDate }}
                 </p>
-                <p class="h-28">
-                  {{ post.fields.description }}
+                <p class="text-xl font-bold">
+                  {{ post.title }}
+                </p>
+                <p class="text-lg">
+                  By {{ post.author.name }}
+                </p>
+                <p class="mt-2">
+                  {{ post.description }}
                 </p>
               </div>
               <p class="cursor-pointer text-blue-600 underline hover:text-blue-800 hover:no-underline">

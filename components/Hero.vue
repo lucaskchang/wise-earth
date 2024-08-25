@@ -9,6 +9,7 @@
       </p>
       <div class="flex flex-row">
         <UButton
+          to="/blog"
           size="xl"
           class="mr-4"
           :ui="{ rounded: 'rounded-full' }"
@@ -16,6 +17,7 @@
           Read our Blog
         </UButton>
         <UButton
+          to="/join-us"
           size="xl"
           class="mr-4"
           :ui="{ rounded: 'rounded-full' }"
