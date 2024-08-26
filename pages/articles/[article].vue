@@ -43,7 +43,7 @@
         class="prose lg:prose-xl w-full max-w-none md:w-1/2"
         v-html="documentToHtmlString(article.body)"
       />
-      <div class="hidden w-1/4 space-y-4 px-4 md:block">
+      <div class="hidden w-1/4 space-y-2 px-2 md:block">
         <p class="text-3xl font-bold">
           Recent Posts
         </p>
@@ -52,10 +52,10 @@
           :key="post.id"
         >
           <NuxtLink
-            :to="`/articles/${post.id}`"
+            :to="`/articles/${post.slug}`"
           >
             <div
-              class="flex flex-row space-x-4"
+              class="flex flex-row space-x-4 rounded-lg p-2 hover:bg-gray-100"
             >
               <img
                 :src="post.image"
@@ -82,8 +82,8 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { useBlogStore } from '~/stores/blogStore';
 
 const route = useRoute();
-const articleId = route.params.article;
+const articleSlug = route.params.article;
 const blogStore = useBlogStore();
 const { blogPosts } = storeToRefs(blogStore);
-const article = blogPosts.value.find(post => post.id === articleId);
+const article = blogPosts.value.find(post => post.slug === articleSlug);
 </script>

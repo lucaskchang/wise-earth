@@ -35,13 +35,14 @@ export const useBlogStore = defineStore('blog', () => {
     if (!space.value) return [];
     const blogPostEntries = space.value.items.filter(item => item.sys.contentType.sys.id === 'blogPage');
     return blogPostEntries.map((entry) => {
-      const { title, description, body } = entry.fields;
+      const { title, description, body, slug } = entry.fields;
       const id = entry.sys.id;
       const image = photoFromId(entry.fields.image.sys.id);
       const author = teamMembers.value.find(member => member.id === entry.fields.author.sys.id);
       const publishedDate = new Date(entry.fields.publishedDate).toLocaleDateString();
       return {
         title,
+        slug,
         publishedDate,
         description,
         body,

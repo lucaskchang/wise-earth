@@ -9,7 +9,7 @@
         :key="post.id"
         class="w-full p-4 md:w-1/3 2xl:w-1/4"
       >
-        <NuxtLink :to="`articles/${post.id}`">
+        <NuxtLink :to="`articles/${post.slug}`">
           <div class="h-96 rounded-lg bg-white text-gray-950 transition duration-300 ease-in-out hover:scale-105">
             <img
               class="h-36 w-full rounded-t-lg object-cover"
@@ -30,7 +30,7 @@
                   {{ post.description }}
                 </p>
               </div>
-              <p class="cursor-pointer text-blue-600 underline hover:text-blue-800 hover:no-underline">
+              <p class="mt-2 cursor-pointer text-blue-600 underline hover:text-blue-800 hover:no-underline">
                 Read More
               </p>
             </div>
