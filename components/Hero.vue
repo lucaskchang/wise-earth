@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-[576px] flex-col justify-center p-4 pb-12 pt-0 md:flex-row md:space-x-12 md:py-4">
+  <div class="flex h-[640px] flex-col justify-center p-4 pb-12 pt-0 md:h-[576px] md:flex-row md:space-x-12 md:py-4">
     <div class="flex flex-col justify-center space-y-4">
       <p class="text-center text-6xl font-bold md:text-left md:text-8xl">
         WiseEarth

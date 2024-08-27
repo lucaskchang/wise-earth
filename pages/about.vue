@@ -14,11 +14,11 @@
         Our Values
       </p>
       <UDivider class="mx-auto w-96" />
-      <div class="flex flex-row space-x-8">
+      <div class="flex flex-col space-y-8 px-4 md:flex-row md:space-x-8 md:space-y-0">
         <div
           v-for="value of values"
           :key="value.title"
-          class="flex w-1/3 flex-col space-y-4"
+          class="flex flex-col space-y-4 md:w-1/3"
         >
           <img
             :src="`/illustrations/${value.illustration}`"

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="mx-auto flex w-3/4 flex-col pb-12 pt-24 md:flex-row md:space-x-12">
-      <div class="space-y-4 md:w-1/2">
+    <div class="mx-auto flex w-full flex-col px-4 pb-12 pt-24 md:w-3/4 md:flex-row md:space-x-12 md:px-0">
+      <div class="mt-8 space-y-4 md:mt-0 md:w-1/2">
         <div>
           <p class="2xl:text-lg">
             {{ article.publishedDate }}
@@ -36,15 +36,15 @@
       </div>
     </div>
     <div
-      class="mt-4 flex flex-row bg-white p-12 text-gray-950"
+      class="mt-4 flex flex-col bg-white p-12 text-gray-950 md:flex-row"
     >
       <div class="hidden w-1/4 md:block" />
       <div
-        class="prose lg:prose-xl w-full max-w-none md:w-1/2"
+        class="prose-lg lg:prose-xl w-full max-w-none md:w-1/2"
         v-html="documentToHtmlString(article.body)"
       />
-      <div class="hidden w-1/4 space-y-2 px-2 md:block">
-        <p class="text-3xl font-bold">
+      <div class="mt-4 w-full md:mt-0 md:block md:w-1/4 md:px-2">
+        <p class="ml-2 text-2xl font-bold">
           Recent Posts
         </p>
         <div
