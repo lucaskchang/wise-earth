@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div ref="articlePage">
     <div class="mx-auto flex w-full flex-col px-4 pb-12 pt-24 md:w-3/4 md:flex-row md:space-x-12 md:px-0">
       <div class="mt-8 space-y-4 md:mt-0 md:w-1/2">
         <div>
@@ -74,12 +74,27 @@
         </div>
       </div>
     </div>
+    <div
+      class="fixed bottom-0 left-0 h-4 bg-blue-400"
+      :style="{ width: `${progress}%` }"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { useBlogStore } from '~/stores/blogStore';
+
+const { y } = useWindowScroll();
+const articlePage = ref<HTMLElement | null>(null);
+const { height } = useElementSize(articlePage);
+
+const progress = computed(() => {
+  if (!articlePage.value) return 0;
+  // return progress as a percentage of window width
+
+  return (y.value / (height.value - 760)) * 100;
+});
 
 const route = useRoute();
 const articleSlug = route.params.article;
