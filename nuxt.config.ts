@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/image',
     '@nuxtjs/google-fonts',
-    'nuxt-gtag',
     '@nuxt/eslint',
     '@pinia/nuxt',
     '@vueuse/nuxt',
@@ -39,10 +38,6 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {},
-  },
-
-  gtag: {
-    id: 'G-QNLZ5NY7HH',
   },
 
   eslint: {
