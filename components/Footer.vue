@@ -2,14 +2,31 @@
   <div class="sticky top-full bg-blue-400">
     <div class="px-8 py-6">
       <div class="flex flex-col md:flex-row">
-        <div class="flex flex-col md:w-1/2">
+        <div class="flex flex-col">
           <NuxtImg
             format="webp"
             src="/logo_banner.png"
             alt="logo"
             class="w-full md:h-96 md:w-[576px]"
           />
-          <div class="mt-4 flex flex-row text-lg">
+        </div>
+        <div class="order-first flex flex-col py-4 md:order-last md:w-1/2 md:px-4">
+          <div class="flex flex-col space-y-4">
+            <p class="text-3xl font-bold">
+              Subscribe
+            </p>
+            <UInput
+              v-model="email"
+              placeholder="Email"
+            />
+            <UButton
+              class="w-full"
+              @click="subscribe(email); email = ''"
+            >
+              Subscribe
+            </UButton>
+          </div>
+          <div class="mt-12 flex flex-row text-lg">
             <div
               v-for="link of links"
               :key="link.name"
@@ -22,20 +39,7 @@
               </NuxtLink><span v-if="link !== links[links.length - 1]">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
           </div>
-        </div>
-        <div class="order-first flex flex-col space-y-4 px-0 py-4 md:order-last md:w-1/2 md:px-4">
-          <p class="text-3xl font-bold">
-            Subscribe
-          </p>
-          <UInput
-            placeholder="Email"
-          />
-          <UButton
-            class="w-full"
-          >
-            Subscribe
-          </UButton>
-          <p class="text-3xl font-bold">
+          <!-- <p class="text-3xl font-bold">
             Contact Us
           </p>
           <div class="flex flex-row space-x-4">
@@ -57,7 +61,7 @@
             class="w-full"
           >
             Submit
-          </UButton>
+          </UButton> -->
         </div>
       </div>
       <UDivider class="my-4" />
@@ -86,6 +90,8 @@
 </template>
 
 <script setup lang="ts">
+const email = ref('');
+
 const links = [
   {
     name: 'Home',

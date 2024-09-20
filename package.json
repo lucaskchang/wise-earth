@@ -16,10 +16,13 @@
     "@nuxt/ui": "^2.17.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@pinia/nuxt": "^0.5.1",
+    "firebase": "^10.13.2",
     "nuxt": "^3.12.4",
     "nuxt-gtag": "^2.0.6",
+    "nuxt-vuefire": "^1.0.4",
     "pinia": "^2.1.7",
-    "vue": "latest"
+    "vue": "latest",
+    "vuefire": "^3.2.0"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
   "devDependencies": {

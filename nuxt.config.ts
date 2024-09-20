@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@pinia/nuxt',
     '@vueuse/nuxt',
+    'nuxt-vuefire',
   ],
 
   googleFonts: {
@@ -47,6 +48,18 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: true,
+    },
+  },
+
+  vuefire: {
+    config: {
+      apiKey: 'AIzaSyBHl_8m49_XF2hOa1_rnkCFl0nFaVDg4XA',
+      authDomain: 'wise-earth.firebaseapp.com',
+      projectId: 'wise-earth',
+      storageBucket: 'wise-earth.appspot.com',
+      messagingSenderId: '744112115650',
+      appId: '1:744112115650:web:4a63ea91c24edb16ebd05b',
+      measurementId: 'G-ZH9V7B6JYV',
     },
   },
 
