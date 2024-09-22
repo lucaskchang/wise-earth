@@ -93,10 +93,14 @@
 </template>
 
 <script setup lang="ts">
+import socials from '~/assets/data/socials.json';
+import links from '~/assets/data/pages.json';
+
 const { width } = useWindowSize();
 const bigScreen = computed(() => width.value >= 768);
 const showMenu = ref(false);
 const menu = ref(null);
+
 onClickOutside(menu, () => {
   setTimeout(() => {
     if (showMenu.value) {
@@ -104,35 +108,6 @@ onClickOutside(menu, () => {
     }
   }, 100);
 });
-const links = [
-  {
-    name: 'About',
-    to: '/about',
-  },
-  {
-    name: 'Blog',
-    to: '/blog',
-  },
-  {
-    name: 'Join Us',
-    to: '/join-us',
-  },
-];
-
-const socials = [
-  {
-    icon: 'i-mdi-instagram',
-    link: 'https://www.instagram.com/wiseearth11/',
-  },
-  {
-    icon: 'i-mdi-pinterest',
-    link: 'https://www.pinterest.com/wiseearth11/_created/',
-  },
-  {
-    icon: 'i-mdi-linkedin',
-    link: 'https://linkedin.com',
-  },
-];
 </script>
 
 <style scoped>

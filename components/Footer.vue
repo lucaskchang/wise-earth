@@ -26,17 +26,21 @@
               Subscribe
             </UButton>
           </div>
-          <div class="mt-12 flex flex-row text-lg">
+          <div class="mt-12 flex flex-row space-x-2 text-lg">
             <div
               v-for="link of links"
               :key="link.name"
+              class="flex flex-row space-x-2"
             >
               <NuxtLink
                 :to="link.to"
                 class="hover:text-gray-200"
               >
                 {{ link.name }}
-              </NuxtLink><span v-if="link !== links[links.length - 1]">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </NuxtLink>
+              <p v-if="link !== links[links.length - 1]">
+                |
+              </p>
             </div>
           </div>
           <!-- <p class="text-3xl font-bold">
@@ -90,39 +94,8 @@
 </template>
 
 <script setup lang="ts">
+import socials from '~/assets/data/socials.json';
+import links from '~/assets/data/pages.json';
+
 const email = ref('');
-
-const links = [
-  {
-    name: 'Home',
-    to: '/',
-  },
-  {
-    name: 'About',
-    to: '/about',
-  },
-  {
-    name: 'Blog',
-    to: '/blog',
-  },
-  {
-    name: 'Join Us',
-    to: '/join-us',
-  },
-];
-
-const socials = [
-  {
-    icon: 'i-mdi-instagram',
-    link: 'https://www.instagram.com/wiseearth11/',
-  },
-  {
-    icon: 'i-mdi-pinterest',
-    link: 'https://www.pinterest.com/wiseearth11/_created/',
-  },
-  {
-    icon: 'i-mdi-linkedin',
-    link: 'https://linkedin.com',
-  },
-];
 </script>
