@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center md:space-x-12 p-4 md:h-[768px] md:flex-row">
+  <div class="flex flex-col justify-center p-4 md:h-[768px] md:flex-row md:space-x-12">
     <div class="flex flex-col justify-center">
       <img
         src="/illustrations/team.svg"
