@@ -29,15 +29,15 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxt/image',
-    '@nuxtjs/google-fonts',
     '@nuxt/eslint',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     'nuxt-vuefire',
+    'nuxt-gtag',
   ],
 
-  googleFonts: {
-    families: {},
+  gtag: {
+    id: 'G-ZH9V7B6JYV',
   },
 
   eslint: {
